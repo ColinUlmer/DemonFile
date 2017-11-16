@@ -1,0 +1,55 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+#header {
+  text-align : center;
+}
+
+
+#intro h4 {
+  text-align: center;
+}
+
+#verifying-icon {
+  display : none;
+}
+
+#file-options {
+  display: none;
+}
+
+#warning-doublephone {
+  display: none;
+  color: red;
+}
+#warning-nophone {
+  display: none;
+  color: red;
+}
+#warning-nocode {
+  display: none;
+  color: red;
+}
+#warning-invalidcode {
+  display: none;
+  color: red;
+}
+#dropzone-preview {
+  display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  line-height: 50px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}

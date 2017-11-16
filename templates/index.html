@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}DemonFile - File Short-Term Hosting {% endblock %}
+{% block body %}
+<body>
+  <div class="container">
+  <div id="header" class="row" style="margin-top:2%;">
+    <div class="col align-self-center">
+    <h1>DemonFile - Short-term File Hosting </h1>
+    <h3>Snapchat, but with files basically</h3>
+  </div>
+  </div>
+
+<hr class="row" />
+<h4 class="row">What/Why?</h4>
+<div id="intro" class="row">
+  <p>I hate when I have to print a paper out on campus or switch a file between systems by emailing it to myself.</p>
+  <p>It's a clunky solution. I could put it in my Dropbox but then I forget about it and it sits there and clutters the folder up.
+  Also my sync time is weird and not consistant between computers. Plus if I'm doing this on a campus computer for just a second it's annoying to
+  log into gmail or dropbox on such a public machine, I've seen several people just leave their email/dropbox account open on a lab computer and just leave to print
+  a document without coming back.</p>
+  <h4 class="col align-self-center"> Thus DemonFile </h4>
+  <p>DemonFile uses your phone as verification for file upload and download, and we don't even save your phone number to do it. This means you never need to create an account.
+  Once you upload a file you'll have three hours to access it before we delete it. No need to cluter an inbox or Dropbox folder</p>
+</div>
+
+<hr class="row" />
+
+<div id="main-form-row" class="row">
+
+  <div id="instructions" class="col">
+    <h2> How To Use </h2>
+    <ol>
+      <li> Verify Your Phone Number </li>
+      <li> Drop file onto screen to upload </li>
+      <li> Switch systesm, run to the library, etc.</li>
+      <li> Re enter your phone and code</li>
+      <li> Download the files you want</li>
+      <li> Bro down </li>
+  </div>
+
+  <div id="mainform" class="col">
+    <h2>Login/Create Account</h2>
+    <form method="POST" target="/">
+
+    <div class="form-group">
+      <input id="phone-input" type="text" name="phone-number" placeholder="Phone Number"/>
+      <button id="send_code_btn" type="button" class="btn btn-primary" onclick="send_verification()"> Create Code </button>
+      <p id="warning-doublephone">This phone number is already in use, please enter your code to login</p>
+      <p id="warning-nophone">Please enter your phone number</p>
+    </div>
+
+    <div class="form-group">
+      <input id="passcode-input" type="text" name="passcode" placeholder="Verify Passcode">
+      <img id="verifying-icon" src="static/img/verifying.gif" height="25px" width="25px" />
+      <p id="warning-invalidcode"><br>Invalid Phone/Code combination, try again or please create an account</p>
+      <p id="warning-nocode"><br>Please enter your code</p>
+    </div>
+
+    <div class="form-group">
+      <button type="button" id="open-file-system-btn" class="btn btn-primary" onclick="showFileWindow()"> Open File System </button>
+
+    </form>
+  </div>
+</div>
+
+</div>
+
+<div class="containter" id="file-options">
+<hr id="file-table-line" class="row" />
+  <div class="row">
+    <h2 class="col" style="margin-bottom:20px;">Available Files</h2>
+    <button id="delete-btn" type="button" class="col btn btn-danger">Delete Account</button>
+  </div>
+  <br>
+    <!--<button type="button" class="row btn btn-success">Create Folder</button>-->
+    <div class="container" id="file-window">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Filename</th>
+          <th>Type</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody id="file-window-body">
+        <!--
+        <tr>
+          <td colspan="2">homework.docx</td>
+          <td> Google Doc </td>
+          <td> 0.1 mb </td>
+        </tr>
+        <tr>
+          <td colspan="2">not-porn.jpeg</td>
+          <td> Image/JPEG </td>
+          <td> 2.3 mb </td>
+        </tr>
+        <tr>
+          <td colspan="2">big_movie_project.mpeg4</td>
+          <td> Movie/MPEG4 </td>
+          <td> 3.6 gb </td>
+        </tr>-->
+      </tbody>
+
+    </table>
+    <div id="dropzone-preview"></div>
+  </div>
+</div>
+
+
+</div>
+</body>
+
+<script src="static/js/dropzone.js"></script>
+<script src="static/js/main.js"></script>
+
+
+{% endblock %}
