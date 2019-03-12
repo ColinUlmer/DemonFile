@@ -9,9 +9,9 @@ from twilio.rest import Client
 from models import db, File, User
 from config import app
 
-pyrax.set_setting("identity_type", "rackspace")
-pyrax.set_default_region(app.config['RACKSPACE_REGION'])
-pyrax.set_credentials(app.config['RACKSPACE_USERNAME'], app.config['RACKSPACE_SECRET'])
+#pyrax.set_setting("identity_type", "rackspace")
+#pyrax.set_default_region(app.config['RACKSPACE_REGION'])
+#pyrax.set_credentials(app.config['RACKSPACE_USERNAME'], app.config['RACKSPACE_SECRET'])
 
 def getUserFiles(phone_number):
     hashed_phone = hashlib.sha224(phone_number).hexdigest()
