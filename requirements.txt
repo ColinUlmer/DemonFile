@@ -16,7 +16,7 @@ ip-associations-python-novaclient-ext==0.2
 ipaddress==1.0.18
 iso8601==0.1.12
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 keyring==10.4.0
 keystoneauth1==3.2.0
 MarkupSafe==1.0
