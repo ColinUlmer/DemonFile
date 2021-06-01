@@ -58,6 +58,6 @@ six==1.11.0
 SQLAlchemy==1.1.14
 stevedore==1.27.1
 twilio==6.8.2
-urllib3==1.22
+urllib3==1.26.5
 Werkzeug==0.12.2
 wrapt==1.10.11
