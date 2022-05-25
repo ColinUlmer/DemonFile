@@ -38,7 +38,7 @@ positional==1.2.1
 prettytable==0.7.2
 psycopg2==2.7.3.1
 pycparser==2.18
-PyJWT==1.5.3
+PyJWT==2.4.0
 pyOpenSSL==17.3.0
 pyparsing==2.2.0
 pyrax==1.9.8
