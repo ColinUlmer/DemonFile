@@ -31,7 +31,7 @@ os-virtual-interfacesv2-python-novaclient-ext==0.20
 oslo.config==5.0.0
 oslo.i18n==3.18.0
 oslo.serialization==2.21.2
-oslo.utils==3.31.0
+oslo.utils==4.10.1
 pbr==1.10.0
 pkg-resources==0.0.0
 positional==1.2.1
